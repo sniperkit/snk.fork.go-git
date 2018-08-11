@@ -1,11 +1,17 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 15:40:00.935176804 +0200 CEST m=+0.032827986
+- Status: analyzed
+*/
+
 package packp
 
 /*
 
 A nice way to trace the real data transmitted and received by git, use:
 
-GIT_TRACE_PACKET=true git ls-remote http://github.com/src-d/go-git
-GIT_TRACE_PACKET=true git clone http://github.com/src-d/go-git
+GIT_TRACE_PACKET=true git ls-remote http://github.com/sniperkit/snk.fork.go-git
+GIT_TRACE_PACKET=true git clone http://github.com/sniperkit/snk.fork.go-git
 
 Here follows a copy of the current protocol specification at the time of
 this writing.

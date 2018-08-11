@@ -1,3 +1,9 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 15:40:00.935176804 +0200 CEST m=+0.032827986
+- Status: analyzed
+*/
+
 // Package http implements the HTTP transport protocol.
 package http
 
@@ -8,10 +14,10 @@ import (
 	"strconv"
 	"strings"
 
-	"gopkg.in/src-d/go-git.v4/plumbing"
-	"gopkg.in/src-d/go-git.v4/plumbing/protocol/packp"
-	"gopkg.in/src-d/go-git.v4/plumbing/transport"
-	"gopkg.in/src-d/go-git.v4/utils/ioutil"
+	"github.com/sniperkit/snk.fork.go-git.v4/plumbing"
+	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/protocol/packp"
+	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/transport"
+	"github.com/sniperkit/snk.fork.go-git.v4/utils/ioutil"
 )
 
 // it requires a bytes.Buffer, because we need to know the length

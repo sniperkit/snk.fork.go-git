@@ -1,3 +1,9 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 15:40:00.935176804 +0200 CEST m=+0.032827986
+- Status: analyzed
+*/
+
 // Package common implements the git pack protocol with a pluggable transport.
 // This is a low-level package to implement new transports. Use a concrete
 // implementation instead (e.g. http, file, ssh).
@@ -15,12 +21,12 @@ import (
 	"strings"
 	"time"
 
-	"gopkg.in/src-d/go-git.v4/plumbing/format/pktline"
-	"gopkg.in/src-d/go-git.v4/plumbing/protocol/packp"
-	"gopkg.in/src-d/go-git.v4/plumbing/protocol/packp/capability"
-	"gopkg.in/src-d/go-git.v4/plumbing/protocol/packp/sideband"
-	"gopkg.in/src-d/go-git.v4/plumbing/transport"
-	"gopkg.in/src-d/go-git.v4/utils/ioutil"
+	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/format/pktline"
+	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/protocol/packp"
+	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/protocol/packp/capability"
+	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/protocol/packp/sideband"
+	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/transport"
+	"github.com/sniperkit/snk.fork.go-git.v4/utils/ioutil"
 )
 
 const (

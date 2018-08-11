@@ -1,4 +1,10 @@
 /*
+Sniperkit-Bot
+- Date: 2018-08-11 15:40:00.935176804 +0200 CEST m=+0.032827986
+- Status: analyzed
+*/
+
+/*
 Package fsnoder allows to create merkletrie noders that resemble file
 systems, from human readable string descriptions.  Its intended use is
 generating noders in tests in a readable way.

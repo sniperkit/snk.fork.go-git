@@ -1,3 +1,9 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 15:40:00.935176804 +0200 CEST m=+0.032827986
+- Status: analyzed
+*/
+
 // Package test implements common test suite for different transport
 // implementations.
 //
@@ -11,15 +17,15 @@ import (
 	"os"
 	"path/filepath"
 
-	"gopkg.in/src-d/go-git.v4/plumbing"
-	"gopkg.in/src-d/go-git.v4/plumbing/format/packfile"
-	"gopkg.in/src-d/go-git.v4/plumbing/protocol/packp"
-	"gopkg.in/src-d/go-git.v4/plumbing/protocol/packp/capability"
-	"gopkg.in/src-d/go-git.v4/plumbing/transport"
-	"gopkg.in/src-d/go-git.v4/storage/memory"
+	"github.com/sniperkit/snk.fork.go-git.v4/plumbing"
+	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/format/packfile"
+	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/protocol/packp"
+	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/protocol/packp/capability"
+	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/transport"
+	"github.com/sniperkit/snk.fork.go-git.v4/storage/memory"
 
 	. "gopkg.in/check.v1"
-	"gopkg.in/src-d/go-git-fixtures.v3"
+	"github.com/sniperkit/snk.fork.go-git-fixtures.v3"
 )
 
 type ReceivePackSuite struct {

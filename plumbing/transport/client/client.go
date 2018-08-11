@@ -1,3 +1,9 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 15:40:00.935176804 +0200 CEST m=+0.032827986
+- Status: analyzed
+*/
+
 // Package client contains helper function to deal with the different client
 // protocols.
 package client
@@ -5,11 +11,11 @@ package client
 import (
 	"fmt"
 
-	"gopkg.in/src-d/go-git.v4/plumbing/transport"
-	"gopkg.in/src-d/go-git.v4/plumbing/transport/file"
-	"gopkg.in/src-d/go-git.v4/plumbing/transport/git"
-	"gopkg.in/src-d/go-git.v4/plumbing/transport/http"
-	"gopkg.in/src-d/go-git.v4/plumbing/transport/ssh"
+	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/transport"
+	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/transport/file"
+	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/transport/git"
+	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/transport/http"
+	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/transport/ssh"
 )
 
 // Protocols are the protocols supported by default.

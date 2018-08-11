@@ -1,3 +1,9 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 15:40:00.935176804 +0200 CEST m=+0.032827986
+- Status: analyzed
+*/
+
 // A highly extensible git implementation in pure Go.
 //
 // go-git aims to reach the completeness of libgit2 or jgit, nowadays covers the
@@ -7,4 +13,4 @@
 // It is highly extensible, we have been following the open/close principle in
 // its design to facilitate extensions, mainly focusing the efforts on the
 // persistence of the objects.
-package git // import "gopkg.in/src-d/go-git.v4"
+package git // import "github.com/sniperkit/snk.fork.go-git.v4"

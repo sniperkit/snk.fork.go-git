@@ -1,11 +1,17 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 15:40:00.935176804 +0200 CEST m=+0.032827986
+- Status: analyzed
+*/
+
 package main
 
 import (
 	"os"
 
-	"gopkg.in/src-d/go-git.v4"
-	. "gopkg.in/src-d/go-git.v4/_examples"
-	"gopkg.in/src-d/go-git.v4/plumbing"
+	"github.com/sniperkit/snk.fork.go-git.v4"
+	. "github.com/sniperkit/snk.fork.go-git.v4/_examples"
+	"github.com/sniperkit/snk.fork.go-git.v4/plumbing"
 )
 
 // An example of how to create and remove branches or any other kind of reference.

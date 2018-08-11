@@ -1,3 +1,9 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 15:40:00.935176804 +0200 CEST m=+0.032827986
+- Status: analyzed
+*/
+
 package git
 
 import (
@@ -7,10 +13,10 @@ import (
 	"path/filepath"
 	"testing"
 
-	"gopkg.in/src-d/go-git.v4/plumbing"
+	"github.com/sniperkit/snk.fork.go-git.v4/plumbing"
 
 	. "gopkg.in/check.v1"
-	"gopkg.in/src-d/go-git-fixtures.v3"
+	"github.com/sniperkit/snk.fork.go-git-fixtures.v3"
 )
 
 type SubmoduleSuite struct {

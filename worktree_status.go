@@ -1,3 +1,9 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 15:40:00.935176804 +0200 CEST m=+0.032827986
+- Status: analyzed
+*/
+
 package git
 
 import (
@@ -9,16 +15,16 @@ import (
 	"path/filepath"
 
 	"gopkg.in/src-d/go-billy.v4/util"
-	"gopkg.in/src-d/go-git.v4/plumbing"
-	"gopkg.in/src-d/go-git.v4/plumbing/filemode"
-	"gopkg.in/src-d/go-git.v4/plumbing/format/gitignore"
-	"gopkg.in/src-d/go-git.v4/plumbing/format/index"
-	"gopkg.in/src-d/go-git.v4/plumbing/object"
-	"gopkg.in/src-d/go-git.v4/utils/ioutil"
-	"gopkg.in/src-d/go-git.v4/utils/merkletrie"
-	"gopkg.in/src-d/go-git.v4/utils/merkletrie/filesystem"
-	mindex "gopkg.in/src-d/go-git.v4/utils/merkletrie/index"
-	"gopkg.in/src-d/go-git.v4/utils/merkletrie/noder"
+	"github.com/sniperkit/snk.fork.go-git.v4/plumbing"
+	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/filemode"
+	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/format/gitignore"
+	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/format/index"
+	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/object"
+	"github.com/sniperkit/snk.fork.go-git.v4/utils/ioutil"
+	"github.com/sniperkit/snk.fork.go-git.v4/utils/merkletrie"
+	"github.com/sniperkit/snk.fork.go-git.v4/utils/merkletrie/filesystem"
+	mindex "github.com/sniperkit/snk.fork.go-git.v4/utils/merkletrie/index"
+	"github.com/sniperkit/snk.fork.go-git.v4/utils/merkletrie/noder"
 )
 
 var (

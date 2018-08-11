@@ -1,3 +1,9 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 15:40:00.935176804 +0200 CEST m=+0.032827986
+- Status: analyzed
+*/
+
 // Package revision extracts git revision from string
 // More informations about revision : https://www.kernel.org/pub/software/scm/git/docs/gitrevisions.html
 package revision

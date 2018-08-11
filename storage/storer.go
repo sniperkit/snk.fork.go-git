@@ -1,12 +1,18 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 15:40:00.935176804 +0200 CEST m=+0.032827986
+- Status: analyzed
+*/
+
 package storage
 
 import (
-	"gopkg.in/src-d/go-git.v4/config"
-	"gopkg.in/src-d/go-git.v4/plumbing/storer"
+	"github.com/sniperkit/snk.fork.go-git.v4/config"
+	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/storer"
 )
 
 // Storer is a generic storage of objects, references and any information
-// related to a particular repository. The package gopkg.in/src-d/go-git.v4/storage
+// related to a particular repository. The package github.com/sniperkit/snk.fork.go-git.v4/storage
 // contains two implementation a filesystem base implementation (such as `.git`)
 // and a memory implementations being ephemeral
 type Storer interface {

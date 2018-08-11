@@ -1,3 +1,9 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 15:40:00.935176804 +0200 CEST m=+0.032827986
+- Status: analyzed
+*/
+
 package git
 
 import (
@@ -7,17 +13,17 @@ import (
 	"io/ioutil"
 	"os"
 
-	"gopkg.in/src-d/go-git.v4/config"
-	"gopkg.in/src-d/go-git.v4/plumbing"
-	"gopkg.in/src-d/go-git.v4/plumbing/protocol/packp"
-	"gopkg.in/src-d/go-git.v4/plumbing/storer"
-	"gopkg.in/src-d/go-git.v4/storage"
-	"gopkg.in/src-d/go-git.v4/storage/filesystem"
-	"gopkg.in/src-d/go-git.v4/storage/memory"
+	"github.com/sniperkit/snk.fork.go-git.v4/config"
+	"github.com/sniperkit/snk.fork.go-git.v4/plumbing"
+	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/protocol/packp"
+	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/storer"
+	"github.com/sniperkit/snk.fork.go-git.v4/storage"
+	"github.com/sniperkit/snk.fork.go-git.v4/storage/filesystem"
+	"github.com/sniperkit/snk.fork.go-git.v4/storage/memory"
 
 	. "gopkg.in/check.v1"
 	"gopkg.in/src-d/go-billy.v4/osfs"
-	"gopkg.in/src-d/go-git-fixtures.v3"
+	"github.com/sniperkit/snk.fork.go-git-fixtures.v3"
 )
 
 type RemoteSuite struct {

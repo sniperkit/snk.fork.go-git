@@ -1,3 +1,9 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 15:40:00.935176804 +0200 CEST m=+0.032827986
+- Status: analyzed
+*/
+
 package git
 
 import (
@@ -12,20 +18,20 @@ import (
 	"testing"
 	"time"
 
-	"gopkg.in/src-d/go-git.v4/config"
-	"gopkg.in/src-d/go-git.v4/plumbing"
-	"gopkg.in/src-d/go-git.v4/plumbing/filemode"
-	"gopkg.in/src-d/go-git.v4/plumbing/format/gitignore"
-	"gopkg.in/src-d/go-git.v4/plumbing/format/index"
-	"gopkg.in/src-d/go-git.v4/plumbing/object"
-	"gopkg.in/src-d/go-git.v4/storage/memory"
+	"github.com/sniperkit/snk.fork.go-git.v4/config"
+	"github.com/sniperkit/snk.fork.go-git.v4/plumbing"
+	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/filemode"
+	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/format/gitignore"
+	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/format/index"
+	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/object"
+	"github.com/sniperkit/snk.fork.go-git.v4/storage/memory"
 
 	"golang.org/x/text/unicode/norm"
 	. "gopkg.in/check.v1"
 	"gopkg.in/src-d/go-billy.v4/memfs"
 	"gopkg.in/src-d/go-billy.v4/osfs"
 	"gopkg.in/src-d/go-billy.v4/util"
-	"gopkg.in/src-d/go-git-fixtures.v3"
+	"github.com/sniperkit/snk.fork.go-git-fixtures.v3"
 )
 
 type WorktreeSuite struct {
@@ -625,7 +631,7 @@ func (s *WorktreeSuite) TestCheckoutBisect(c *C) {
 		c.Skip("skipping test in short mode.")
 	}
 
-	s.testCheckoutBisect(c, "https://github.com/src-d/go-git.git")
+	s.testCheckoutBisect(c, "https://github.com/sniperkit/snk.fork.go-git.git")
 }
 
 func (s *WorktreeSuite) TestCheckoutBisectSubmodules(c *C) {

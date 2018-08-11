@@ -1,3 +1,9 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 15:40:00.935176804 +0200 CEST m=+0.032827986
+- Status: analyzed
+*/
+
 package object
 
 import (
@@ -7,11 +13,11 @@ import (
 	"strings"
 	"time"
 
-	"gopkg.in/src-d/go-git.v4/plumbing"
+	"github.com/sniperkit/snk.fork.go-git.v4/plumbing"
 
 	. "gopkg.in/check.v1"
-	"gopkg.in/src-d/go-git-fixtures.v3"
-	"gopkg.in/src-d/go-git.v4/storage/filesystem"
+	"github.com/sniperkit/snk.fork.go-git-fixtures.v3"
+	"github.com/sniperkit/snk.fork.go-git.v4/storage/filesystem"
 )
 
 type SuiteCommit struct {
@@ -246,7 +252,7 @@ func (s *SuiteCommit) TestString(c *C) {
 func (s *SuiteCommit) TestStringMultiLine(c *C) {
 	hash := plumbing.NewHash("e7d896db87294e33ca3202e536d4d9bb16023db3")
 
-	f := fixtures.ByURL("https://github.com/src-d/go-git.git").One()
+	f := fixtures.ByURL("https://github.com/sniperkit/snk.fork.go-git.git").One()
 	sto, err := filesystem.NewStorage(f.DotGit())
 	c.Assert(err, IsNil)
 

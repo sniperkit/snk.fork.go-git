@@ -1,3 +1,9 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 15:40:00.935176804 +0200 CEST m=+0.032827986
+- Status: analyzed
+*/
+
 // Package revlist provides support to access the ancestors of commits, in a
 // similar way as the git-rev-list command.
 package revlist
@@ -6,10 +12,10 @@ import (
 	"fmt"
 	"io"
 
-	"gopkg.in/src-d/go-git.v4/plumbing"
-	"gopkg.in/src-d/go-git.v4/plumbing/filemode"
-	"gopkg.in/src-d/go-git.v4/plumbing/object"
-	"gopkg.in/src-d/go-git.v4/plumbing/storer"
+	"github.com/sniperkit/snk.fork.go-git.v4/plumbing"
+	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/filemode"
+	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/object"
+	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/storer"
 )
 
 // Objects applies a complementary set. It gets all the hashes from all

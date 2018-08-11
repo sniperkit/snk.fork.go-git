@@ -1,3 +1,9 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 15:40:00.935176804 +0200 CEST m=+0.032827986
+- Status: analyzed
+*/
+
 package git
 
 import (
@@ -6,20 +12,20 @@ import (
 	"fmt"
 	"io"
 
-	"gopkg.in/src-d/go-git.v4/config"
-	"gopkg.in/src-d/go-git.v4/plumbing"
-	"gopkg.in/src-d/go-git.v4/plumbing/format/packfile"
-	"gopkg.in/src-d/go-git.v4/plumbing/object"
-	"gopkg.in/src-d/go-git.v4/plumbing/protocol/packp"
-	"gopkg.in/src-d/go-git.v4/plumbing/protocol/packp/capability"
-	"gopkg.in/src-d/go-git.v4/plumbing/protocol/packp/sideband"
-	"gopkg.in/src-d/go-git.v4/plumbing/revlist"
-	"gopkg.in/src-d/go-git.v4/plumbing/storer"
-	"gopkg.in/src-d/go-git.v4/plumbing/transport"
-	"gopkg.in/src-d/go-git.v4/plumbing/transport/client"
-	"gopkg.in/src-d/go-git.v4/storage"
-	"gopkg.in/src-d/go-git.v4/storage/memory"
-	"gopkg.in/src-d/go-git.v4/utils/ioutil"
+	"github.com/sniperkit/snk.fork.go-git.v4/config"
+	"github.com/sniperkit/snk.fork.go-git.v4/plumbing"
+	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/format/packfile"
+	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/object"
+	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/protocol/packp"
+	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/protocol/packp/capability"
+	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/protocol/packp/sideband"
+	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/revlist"
+	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/storer"
+	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/transport"
+	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/transport/client"
+	"github.com/sniperkit/snk.fork.go-git.v4/storage"
+	"github.com/sniperkit/snk.fork.go-git.v4/storage/memory"
+	"github.com/sniperkit/snk.fork.go-git.v4/utils/ioutil"
 )
 
 var (

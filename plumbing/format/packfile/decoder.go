@@ -1,11 +1,17 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 15:40:00.935176804 +0200 CEST m=+0.032827986
+- Status: analyzed
+*/
+
 package packfile
 
 import (
 	"bytes"
 
-	"gopkg.in/src-d/go-git.v4/plumbing"
-	"gopkg.in/src-d/go-git.v4/plumbing/cache"
-	"gopkg.in/src-d/go-git.v4/plumbing/storer"
+	"github.com/sniperkit/snk.fork.go-git.v4/plumbing"
+	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/cache"
+	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/storer"
 )
 
 // Format specifies if the packfile uses ref-deltas or ofs-deltas.

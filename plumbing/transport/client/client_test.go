@@ -1,3 +1,9 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 15:40:00.935176804 +0200 CEST m=+0.032827986
+- Status: analyzed
+*/
+
 package client
 
 import (
@@ -5,7 +11,7 @@ import (
 	"net/http"
 	"testing"
 
-	"gopkg.in/src-d/go-git.v4/plumbing/transport"
+	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/transport"
 
 	. "gopkg.in/check.v1"
 )
@@ -17,7 +23,7 @@ type ClientSuite struct{}
 var _ = Suite(&ClientSuite{})
 
 func (s *ClientSuite) TestNewClientSSH(c *C) {
-	e, err := transport.NewEndpoint("ssh://github.com/src-d/go-git")
+	e, err := transport.NewEndpoint("ssh://github.com/sniperkit/snk.fork.go-git")
 	c.Assert(err, IsNil)
 
 	output, err := NewClient(e)
@@ -26,7 +32,7 @@ func (s *ClientSuite) TestNewClientSSH(c *C) {
 }
 
 func (s *ClientSuite) TestNewClientUnknown(c *C) {
-	e, err := transport.NewEndpoint("unknown://github.com/src-d/go-git")
+	e, err := transport.NewEndpoint("unknown://github.com/sniperkit/snk.fork.go-git")
 	c.Assert(err, IsNil)
 
 	_, err = NewClient(e)
@@ -35,7 +41,7 @@ func (s *ClientSuite) TestNewClientUnknown(c *C) {
 
 func (s *ClientSuite) TestNewClientNil(c *C) {
 	Protocols["newscheme"] = nil
-	e, err := transport.NewEndpoint("newscheme://github.com/src-d/go-git")
+	e, err := transport.NewEndpoint("newscheme://github.com/sniperkit/snk.fork.go-git")
 	c.Assert(err, IsNil)
 
 	_, err = NewClient(e)

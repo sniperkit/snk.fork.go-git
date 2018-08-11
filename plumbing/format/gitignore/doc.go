@@ -1,3 +1,9 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 15:40:00.935176804 +0200 CEST m=+0.032827986
+- Status: analyzed
+*/
+
 // Package gitignore implements matching file system paths to gitignore patterns that
 // can be automatically read from a git repository tree in the order of definition
 // priorities. It support all pattern formats as specified in the original gitignore

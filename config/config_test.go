@@ -1,8 +1,14 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 15:40:00.935176804 +0200 CEST m=+0.032827986
+- Status: analyzed
+*/
+
 package config
 
 import (
 	. "gopkg.in/check.v1"
-	"gopkg.in/src-d/go-git.v4/plumbing"
+	"github.com/sniperkit/snk.fork.go-git.v4/plumbing"
 )
 
 type ConfigSuite struct{}
@@ -20,7 +26,7 @@ func (s *ConfigSuite) TestUnmarshall(c *C) {
         fetch = +refs/heads/*:refs/remotes/origin/*
 [remote "alt"]
 		url = git@github.com:mcuadros/go-git.git
-		url = git@github.com:src-d/go-git.git
+		url = git@github.com:sniperkit/snk.fork.go-git.git
 		fetch = +refs/heads/*:refs/remotes/origin/*
 		fetch = +refs/pull/*:refs/remotes/origin/pull/*
 [submodule "qux"]
@@ -44,7 +50,7 @@ func (s *ConfigSuite) TestUnmarshall(c *C) {
 	c.Assert(cfg.Remotes["origin"].URLs, DeepEquals, []string{"git@github.com:mcuadros/go-git.git"})
 	c.Assert(cfg.Remotes["origin"].Fetch, DeepEquals, []RefSpec{"+refs/heads/*:refs/remotes/origin/*"})
 	c.Assert(cfg.Remotes["alt"].Name, Equals, "alt")
-	c.Assert(cfg.Remotes["alt"].URLs, DeepEquals, []string{"git@github.com:mcuadros/go-git.git", "git@github.com:src-d/go-git.git"})
+	c.Assert(cfg.Remotes["alt"].URLs, DeepEquals, []string{"git@github.com:mcuadros/go-git.git", "git@github.com:sniperkit/snk.fork.go-git.git"})
 	c.Assert(cfg.Remotes["alt"].Fetch, DeepEquals, []RefSpec{"+refs/heads/*:refs/remotes/origin/*", "+refs/pull/*:refs/remotes/origin/pull/*"})
 	c.Assert(cfg.Submodules, HasLen, 1)
 	c.Assert(cfg.Submodules["qux"].Name, Equals, "qux")
@@ -62,7 +68,7 @@ func (s *ConfigSuite) TestMarshall(c *C) {
 	window = 20
 [remote "alt"]
 	url = git@github.com:mcuadros/go-git.git
-	url = git@github.com:src-d/go-git.git
+	url = git@github.com:sniperkit/snk.fork.go-git.git
 	fetch = +refs/heads/*:refs/remotes/origin/*
 	fetch = +refs/pull/*:refs/remotes/origin/pull/*
 [remote "origin"]
@@ -85,7 +91,7 @@ func (s *ConfigSuite) TestMarshall(c *C) {
 
 	cfg.Remotes["alt"] = &RemoteConfig{
 		Name:  "alt",
-		URLs:  []string{"git@github.com:mcuadros/go-git.git", "git@github.com:src-d/go-git.git"},
+		URLs:  []string{"git@github.com:mcuadros/go-git.git", "git@github.com:sniperkit/snk.fork.go-git.git"},
 		Fetch: []RefSpec{"+refs/heads/*:refs/remotes/origin/*", "+refs/pull/*:refs/remotes/origin/pull/*"},
 	}
 

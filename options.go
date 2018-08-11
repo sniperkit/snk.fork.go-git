@@ -1,14 +1,20 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 15:40:00.935176804 +0200 CEST m=+0.032827986
+- Status: analyzed
+*/
+
 package git
 
 import (
 	"errors"
 	"regexp"
 
-	"gopkg.in/src-d/go-git.v4/config"
-	"gopkg.in/src-d/go-git.v4/plumbing"
-	"gopkg.in/src-d/go-git.v4/plumbing/object"
-	"gopkg.in/src-d/go-git.v4/plumbing/protocol/packp/sideband"
-	"gopkg.in/src-d/go-git.v4/plumbing/transport"
+	"github.com/sniperkit/snk.fork.go-git.v4/config"
+	"github.com/sniperkit/snk.fork.go-git.v4/plumbing"
+	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/object"
+	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/protocol/packp/sideband"
+	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/transport"
 )
 
 // SubmoduleRescursivity defines how depth will affect any submodule recursive
