@@ -15,11 +15,13 @@ import (
 	"github.com/sniperkit/snk.fork.go-git.v4/storage/filesystem"
 	"github.com/sniperkit/snk.fork.go-git.v4/storage/memory"
 
-	. "gopkg.in/check.v1"
-	"gopkg.in/src-d/go-billy.v4"
-	"gopkg.in/src-d/go-billy.v4/memfs"
-	"gopkg.in/src-d/go-billy.v4/util"
+	"github.com/sniperkit/snk.fork.go-billy.v4"
+	"github.com/sniperkit/snk.fork.go-billy.v4/memfs"
+	"github.com/sniperkit/snk.fork.go-billy.v4/util"
+
 	"github.com/sniperkit/snk.fork.go-git-fixtures.v3"
+
+	. "gopkg.in/check.v1"
 )
 
 func Test(t *testing.T) { TestingT(t) }

@@ -21,9 +21,9 @@ import (
 	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/transport/test"
 
 	"github.com/gliderlabs/ssh"
+	"github.com/sniperkit/snk.fork.go-git-fixtures.v3"
 	stdssh "golang.org/x/crypto/ssh"
 	. "gopkg.in/check.v1"
-	"github.com/sniperkit/snk.fork.go-git-fixtures.v3"
 )
 
 type UploadPackSuite struct {

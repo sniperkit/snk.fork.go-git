@@ -10,8 +10,8 @@ package packp
 
 A nice way to trace the real data transmitted and received by git, use:
 
-GIT_TRACE_PACKET=true git ls-remote http://github.com/sniperkit/snk.fork.go-git
-GIT_TRACE_PACKET=true git clone http://github.com/sniperkit/snk.fork.go-git
+GIT_TRACE_PACKET=true git ls-remote http://github.com/sniperkit/snk.fork.go-git.v4
+GIT_TRACE_PACKET=true git clone http://github.com/sniperkit/snk.fork.go-git.v4
 
 Here follows a copy of the current protocol specification at the time of
 this writing.
@@ -173,7 +173,7 @@ hostname parameter, terminated by a NUL byte.
 --
    git-proto-request = request-command SP pathname NUL [ host-parameter NUL ]
    request-command   = "git-upload-pack" / "git-receive-pack" /
-		       "git-upload-archive"   ; case sensitive
+           "git-upload-archive"   ; case sensitive
    pathname          = *( %x01-ff ) ; exclude NUL
    host-parameter    = "host=" hostname [ ":" port ]
 --
@@ -219,24 +219,24 @@ read by the remote git-upload-pack exactly as is, so it's effectively
 an absolute path in the remote filesystem.
 
        git clone ssh://user@example.com/project.git
-		    |
-		    v
+        |
+        v
     ssh user@example.com "git-upload-pack '/project.git'"
 
 In a "user@host:path" format URI, its relative to the user's home
 directory, because the Git client will run:
 
      git clone user@example.com:project.git
-		    |
-		    v
+        |
+        v
   ssh user@example.com "git-upload-pack 'project.git'"
 
 The exception is if a '~' is used, in which case
 we execute it without the leading '/'.
 
       ssh://user@example.com/~alice/project.git,
-		     |
-		     v
+         |
+         v
    ssh user@example.com "git-upload-pack '~alice/project.git'"
 
 A few things to remember here:
@@ -265,7 +265,7 @@ with the object name that each reference currently points to.
    $ echo -e -n "0039git-upload-pack /schacon/gitbook.git\0host=example.com\0" |
       nc -v example.com 9418
    00887217a7c7e582c46cec22a130adf4b9d7d950fba0 HEAD\0multi_ack thin-pack
-		side-band side-band-64k ofs-delta shallow no-progress include-tag
+    side-band side-band-64k ofs-delta shallow no-progress include-tag
    00441d3fcd5ced445d1abc402225c0b8a1299641f497 refs/heads/integration
    003f7217a7c7e582c46cec22a130adf4b9d7d950fba0 refs/heads/master
    003cb88d2441cac0977faf98efc80305012112238d9d refs/tags/v0.9
@@ -288,15 +288,15 @@ MUST peel the ref if it's an annotated tag.
 
 ----
   advertised-refs  =  (no-refs / list-of-refs)
-		      *shallow
-		      flush-pkt
+          *shallow
+          flush-pkt
 
   no-refs          =  PKT-LINE(zero-id SP "capabilities^{}"
-		      NUL capability-list)
+          NUL capability-list)
 
   list-of-refs     =  first-ref *other-ref
   first-ref        =  PKT-LINE(obj-id SP refname
-		      NUL capability-list)
+          NUL capability-list)
 
   other-ref        =  PKT-LINE(other-tip / other-peeled)
   other-tip        =  obj-id SP refname
@@ -332,18 +332,18 @@ out of what the server said it could do with the first 'want' line.
 
 ----
   upload-request    =  want-list
-		       *shallow-line
-		       *1depth-request
-		       flush-pkt
+           *shallow-line
+           *1depth-request
+           flush-pkt
 
   want-list         =  first-want
-		       *additional-want
+           *additional-want
 
   shallow-line      =  PKT-LINE("shallow" SP obj-id)
 
   depth-request     =  PKT-LINE("deepen" SP depth) /
-		       PKT-LINE("deepen-since" SP timestamp) /
-		       PKT-LINE("deepen-not" SP ref)
+           PKT-LINE("deepen-since" SP timestamp) /
+           PKT-LINE("deepen-not" SP ref)
 
   first-want        =  PKT-LINE("want" SP obj-id SP capability-list)
   additional-want   =  PKT-LINE("want" SP obj-id)
@@ -382,8 +382,8 @@ a positive depth, this step is skipped.
 
 ----
   shallow-update   =  *shallow-line
-		      *unshallow-line
-		      flush-pkt
+          *unshallow-line
+          flush-pkt
 
   shallow-line     =  PKT-LINE("shallow" SP obj-id)
 
@@ -410,7 +410,7 @@ so that there is always a block of 32 "in-flight on the wire" at a time.
 
 ----
   upload-haves      =  have-list
-		       compute-end
+           compute-end
 
   have-list         =  *have-line
   have-line         =  PKT-LINE("have" SP obj-id)
@@ -601,8 +601,8 @@ references will be sent.
   shallow           =  PKT-LINE("shallow" SP obj-id)
 
   command-list      =  PKT-LINE(command NUL capability-list)
-		       *PKT-LINE(command)
-		       flush-pkt
+           *PKT-LINE(command)
+           flush-pkt
 
   command           =  create / delete / update
   create            =  zero-id SP new-id  SP name
@@ -613,14 +613,14 @@ references will be sent.
   new-id            =  obj-id
 
   push-cert         = PKT-LINE("push-cert" NUL capability-list LF)
-		      PKT-LINE("certificate version 0.1" LF)
-		      PKT-LINE("pusher" SP ident LF)
-		      PKT-LINE("pushee" SP url LF)
-		      PKT-LINE("nonce" SP nonce LF)
-		      PKT-LINE(LF)
-		      *PKT-LINE(command LF)
-		      *PKT-LINE(gpg-signature-lines LF)
-		      PKT-LINE("push-cert-end" LF)
+          PKT-LINE("certificate version 0.1" LF)
+          PKT-LINE("pusher" SP ident LF)
+          PKT-LINE("pushee" SP url LF)
+          PKT-LINE("nonce" SP nonce LF)
+          PKT-LINE(LF)
+          *PKT-LINE(command LF)
+          *PKT-LINE(gpg-signature-lines LF)
+          PKT-LINE("push-cert-end" LF)
 
   packfile          = "PACK" 28*(OCTET)
 ----
@@ -658,18 +658,18 @@ optional; it must be present.
 Currently, the following header fields are defined:
 
 `pusher` ident::
-	Identify the GPG key in "Human Readable Name <email@address>"
-	format.
+  Identify the GPG key in "Human Readable Name <email@address>"
+  format.
 
 `pushee` url::
-	The repository URL (anonymized, if the URL contains
-	authentication material) the user who ran `git push`
-	intended to push into.
+  The repository URL (anonymized, if the URL contains
+  authentication material) the user who ran `git push`
+  intended to push into.
 
 `nonce` nonce::
-	The 'nonce' string the receiving repository asked the
-	pushing user to include in the certificate, to prevent
-	replay attacks.
+  The 'nonce' string the receiving repository asked the
+  pushing user to include in the certificate, to prevent
+  replay attacks.
 
 The GPG signature lines are a detached signature for the contents
 recorded in the push certificate before the signature block begins.
@@ -689,8 +689,8 @@ update was successful, or 'ng [refname] [error]' if the update was not.
 
 ----
   report-status     = unpack-status
-		      1*(command-status)
-		      flush-pkt
+          1*(command-status)
+          flush-pkt
 
   unpack-status     = PKT-LINE("unpack" SP unpack-result)
   unpack-result     = "ok" / error-msg

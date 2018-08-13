@@ -12,8 +12,9 @@ import (
 	"github.com/sniperkit/snk.fork.go-git.v4/plumbing"
 	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/format/pktline"
 
-	. "gopkg.in/check.v1"
 	"io/ioutil"
+
+	. "gopkg.in/check.v1"
 )
 
 type UpdReqEncodeSuite struct{}

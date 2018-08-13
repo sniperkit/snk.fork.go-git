@@ -14,7 +14,7 @@ import (
 	"path"
 	"path/filepath"
 
-	"gopkg.in/src-d/go-billy.v4/util"
+	"github.com/sniperkit/snk.fork.go-billy.v4/util"
 	"github.com/sniperkit/snk.fork.go-git.v4/plumbing"
 	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/filemode"
 	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/format/gitignore"

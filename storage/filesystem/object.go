@@ -21,7 +21,7 @@ import (
 	"github.com/sniperkit/snk.fork.go-git.v4/storage/memory"
 	"github.com/sniperkit/snk.fork.go-git.v4/utils/ioutil"
 
-	"gopkg.in/src-d/go-billy.v4"
+	"github.com/sniperkit/snk.fork.go-billy.v4"
 )
 
 type ObjectStorage struct {

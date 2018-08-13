@@ -13,7 +13,7 @@ import (
 	"os/user"
 	"strings"
 
-	"gopkg.in/src-d/go-billy.v4"
+	"github.com/sniperkit/snk.fork.go-billy.v4"
 	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/format/config"
 	gioutil "github.com/sniperkit/snk.fork.go-git.v4/utils/ioutil"
 )

@@ -10,8 +10,8 @@ import (
 	"os"
 	"os/exec"
 
-	. "gopkg.in/check.v1"
 	"github.com/sniperkit/snk.fork.go-git-fixtures.v3"
+	. "gopkg.in/check.v1"
 )
 
 type ServerSuite struct {

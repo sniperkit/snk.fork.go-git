@@ -12,8 +12,8 @@ import (
 	"time"
 
 	"github.com/google/go-cmp/cmp"
-	. "gopkg.in/check.v1"
 	"github.com/sniperkit/snk.fork.go-git.v4/plumbing"
+	. "gopkg.in/check.v1"
 )
 
 func (s *IndexSuite) TestEncode(c *C) {

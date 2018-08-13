@@ -26,12 +26,14 @@ import (
 	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/object"
 	"github.com/sniperkit/snk.fork.go-git.v4/storage/memory"
 
+	"github.com/sniperkit/snk.fork.go-billy.v4/memfs"
+	"github.com/sniperkit/snk.fork.go-billy.v4/osfs"
+	"github.com/sniperkit/snk.fork.go-billy.v4/util"
+
+	"github.com/sniperkit/snk.fork.go-git-fixtures.v3"
+
 	"golang.org/x/text/unicode/norm"
 	. "gopkg.in/check.v1"
-	"gopkg.in/src-d/go-billy.v4/memfs"
-	"gopkg.in/src-d/go-billy.v4/osfs"
-	"gopkg.in/src-d/go-billy.v4/util"
-	"github.com/sniperkit/snk.fork.go-git-fixtures.v3"
 )
 
 type WorktreeSuite struct {
@@ -631,7 +633,7 @@ func (s *WorktreeSuite) TestCheckoutBisect(c *C) {
 		c.Skip("skipping test in short mode.")
 	}
 
-	s.testCheckoutBisect(c, "https://github.com/sniperkit/snk.fork.go-git.git")
+	s.testCheckoutBisect(c, "https://github.com/sniperkit/snk.fork.go-git.v4.git")
 }
 
 func (s *WorktreeSuite) TestCheckoutBisectSubmodules(c *C) {

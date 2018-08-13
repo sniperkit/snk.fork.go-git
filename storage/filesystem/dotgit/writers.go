@@ -16,7 +16,7 @@ import (
 	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/format/objfile"
 	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/format/packfile"
 
-	"gopkg.in/src-d/go-billy.v4"
+	"github.com/sniperkit/snk.fork.go-billy.v4"
 )
 
 // PackWriter is a io.Writer that generates the packfile index simultaneously,

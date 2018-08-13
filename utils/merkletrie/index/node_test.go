@@ -11,11 +11,11 @@ import (
 	"path/filepath"
 	"testing"
 
-	. "gopkg.in/check.v1"
 	"github.com/sniperkit/snk.fork.go-git.v4/plumbing"
 	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/format/index"
 	"github.com/sniperkit/snk.fork.go-git.v4/utils/merkletrie"
 	"github.com/sniperkit/snk.fork.go-git.v4/utils/merkletrie/noder"
+	. "gopkg.in/check.v1"
 )
 
 func Test(t *testing.T) { TestingT(t) }

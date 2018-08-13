@@ -12,8 +12,9 @@ import (
 	"github.com/sniperkit/snk.fork.go-git.v4/plumbing"
 	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/filemode"
 
-	. "gopkg.in/check.v1"
 	"github.com/sniperkit/snk.fork.go-git-fixtures.v3"
+
+	. "gopkg.in/check.v1"
 )
 
 func Test(t *testing.T) { TestingT(t) }

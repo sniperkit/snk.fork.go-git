@@ -13,6 +13,7 @@ import (
 	"io"
 
 	"github.com/sniperkit/snk.fork.go-git.v4/config"
+
 	"github.com/sniperkit/snk.fork.go-git.v4/plumbing"
 	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/format/packfile"
 	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/object"
@@ -23,8 +24,10 @@ import (
 	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/storer"
 	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/transport"
 	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/transport/client"
+
 	"github.com/sniperkit/snk.fork.go-git.v4/storage"
 	"github.com/sniperkit/snk.fork.go-git.v4/storage/memory"
+
 	"github.com/sniperkit/snk.fork.go-git.v4/utils/ioutil"
 )
 

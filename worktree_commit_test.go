@@ -14,9 +14,9 @@ import (
 	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/storer"
 	"github.com/sniperkit/snk.fork.go-git.v4/storage/memory"
 
+	"github.com/sniperkit/snk.fork.go-billy.v4/memfs"
+	"github.com/sniperkit/snk.fork.go-billy.v4/util"
 	. "gopkg.in/check.v1"
-	"gopkg.in/src-d/go-billy.v4/memfs"
-	"gopkg.in/src-d/go-billy.v4/util"
 )
 
 func (s *WorktreeSuite) TestCommitInvalidOptions(c *C) {

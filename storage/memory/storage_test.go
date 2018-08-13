@@ -7,21 +7,21 @@ Sniperkit-Bot
 package memory
 
 import (
-	"testing"
+    "testing"
 
-	. "gopkg.in/check.v1"
-	"github.com/sniperkit/snk.fork.go-git.v4/storage/test"
+    "github.com/sniperkit/snk.fork.go-git.v4/storage/test"
+    . "gopkg.in/check.v1"
 )
 
 func Test(t *testing.T) { TestingT(t) }
 
 type StorageSuite struct {
-	test.BaseStorageSuite
+    test.BaseStorageSuite
 }
 
 var _ = Suite(&StorageSuite{})
 
 func (s *StorageSuite) SetUpTest(c *C) {
-	s.BaseStorageSuite = test.NewBaseStorageSuite(NewStorage())
-	s.BaseStorageSuite.SetUpTest(c)
+    s.BaseStorageSuite = test.NewBaseStorageSuite(NewStorage())
+    s.BaseStorageSuite.SetUpTest(c)
 }

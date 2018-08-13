@@ -7,8 +7,8 @@ Sniperkit-Bot
 package config
 
 import (
-	. "gopkg.in/check.v1"
 	"github.com/sniperkit/snk.fork.go-git.v4/plumbing"
+	. "gopkg.in/check.v1"
 )
 
 type ConfigSuite struct{}

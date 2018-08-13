@@ -10,7 +10,7 @@ package filesystem
 import (
 	"github.com/sniperkit/snk.fork.go-git.v4/storage/filesystem/dotgit"
 
-	"gopkg.in/src-d/go-billy.v4"
+	"github.com/sniperkit/snk.fork.go-billy.v4"
 )
 
 // Storage is an implementation of git.Storer that stores data on disk in the

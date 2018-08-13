@@ -17,8 +17,9 @@ import (
 	"github.com/sniperkit/snk.fork.go-git.v4/storage/filesystem"
 	"github.com/sniperkit/snk.fork.go-git.v4/utils/merkletrie"
 
-	. "gopkg.in/check.v1"
 	"github.com/sniperkit/snk.fork.go-git-fixtures.v3"
+
+	. "gopkg.in/check.v1"
 )
 
 type ChangeSuite struct {
@@ -29,7 +30,7 @@ type ChangeSuite struct {
 
 func (s *ChangeSuite) SetUpSuite(c *C) {
 	s.Suite.SetUpSuite(c)
-	s.Fixture = fixtures.ByURL("https://github.com/sniperkit/snk.fork.go-git.git").
+	s.Fixture = fixtures.ByURL("https://github.com/sniperkit/snk.fork.go-git.v4.git").
 		ByTag(".git").One()
 	sto, err := filesystem.NewStorage(s.Fixture.DotGit())
 	c.Assert(err, IsNil)

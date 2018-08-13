@@ -11,9 +11,9 @@ import (
 	"os/user"
 	"strconv"
 
+	"github.com/sniperkit/snk.fork.go-billy.v4"
+	"github.com/sniperkit/snk.fork.go-billy.v4/memfs"
 	. "gopkg.in/check.v1"
-	"gopkg.in/src-d/go-billy.v4"
-	"gopkg.in/src-d/go-billy.v4/memfs"
 )
 
 type MatcherSuite struct {
@@ -23,7 +23,7 @@ type MatcherSuite struct {
 	MEFS billy.Filesystem // root that contains user home, but missing excludesfile entry
 	MIFS billy.Filesystem // root that contains user home, but missing .gitnignore
 
-	SFS  billy.Filesystem // root that contains /etc/gitconfig
+	SFS billy.Filesystem // root that contains /etc/gitconfig
 }
 
 var _ = Suite(&MatcherSuite{})

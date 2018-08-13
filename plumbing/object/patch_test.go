@@ -7,10 +7,10 @@ Sniperkit-Bot
 package object
 
 import (
-	. "gopkg.in/check.v1"
 	fixtures "github.com/sniperkit/snk.fork.go-git-fixtures.v3"
 	"github.com/sniperkit/snk.fork.go-git.v4/plumbing"
 	"github.com/sniperkit/snk.fork.go-git.v4/storage/filesystem"
+	. "gopkg.in/check.v1"
 )
 
 type PatchSuite struct {

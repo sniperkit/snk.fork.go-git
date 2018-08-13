@@ -26,8 +26,8 @@ import (
 	"github.com/sniperkit/snk.fork.go-git.v4/utils/ioutil"
 	"github.com/sniperkit/snk.fork.go-git.v4/utils/merkletrie"
 
-	"gopkg.in/src-d/go-billy.v4"
-	"gopkg.in/src-d/go-billy.v4/util"
+	"github.com/sniperkit/snk.fork.go-billy.v4"
+	"github.com/sniperkit/snk.fork.go-billy.v4/util"
 )
 
 var (

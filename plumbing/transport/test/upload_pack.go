@@ -22,8 +22,8 @@ import (
 	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/transport"
 	"github.com/sniperkit/snk.fork.go-git.v4/storage/memory"
 
-	. "gopkg.in/check.v1"
 	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/protocol/packp/capability"
+	. "gopkg.in/check.v1"
 )
 
 type UploadPackSuite struct {

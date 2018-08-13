@@ -26,8 +26,8 @@ import (
 	"github.com/sniperkit/snk.fork.go-git.v4/storage/filesystem"
 	"github.com/sniperkit/snk.fork.go-git.v4/utils/ioutil"
 
-	"gopkg.in/src-d/go-billy.v4"
-	"gopkg.in/src-d/go-billy.v4/osfs"
+	"github.com/sniperkit/snk.fork.go-billy.v4"
+	"github.com/sniperkit/snk.fork.go-billy.v4/osfs"
 )
 
 // GitDirName this is a special folder where all the git stuff is.

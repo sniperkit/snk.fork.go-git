@@ -12,8 +12,8 @@ import (
 
 	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/protocol/packp/capability"
 
-	. "gopkg.in/check.v1"
 	"github.com/sniperkit/snk.fork.go-git.v4/plumbing"
+	. "gopkg.in/check.v1"
 )
 
 type UploadPackResponseSuite struct{}

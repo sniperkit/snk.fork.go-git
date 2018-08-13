@@ -11,8 +11,8 @@ import (
 	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/transport"
 	"github.com/sniperkit/snk.fork.go-git.v4/storage/filesystem"
 
-	"gopkg.in/src-d/go-billy.v4"
-	"gopkg.in/src-d/go-billy.v4/osfs"
+	"github.com/sniperkit/snk.fork.go-billy.v4"
+	"github.com/sniperkit/snk.fork.go-billy.v4/osfs"
 )
 
 // DefaultLoader is a filesystem loader ignoring host and resolving paths to /.

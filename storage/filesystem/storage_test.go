@@ -13,9 +13,9 @@ import (
 	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/storer"
 	"github.com/sniperkit/snk.fork.go-git.v4/storage/test"
 
+	"github.com/sniperkit/snk.fork.go-billy.v4/memfs"
+	"github.com/sniperkit/snk.fork.go-billy.v4/osfs"
 	. "gopkg.in/check.v1"
-	"gopkg.in/src-d/go-billy.v4/memfs"
-	"gopkg.in/src-d/go-billy.v4/osfs"
 )
 
 func Test(t *testing.T) { TestingT(t) }

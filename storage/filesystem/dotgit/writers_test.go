@@ -17,9 +17,11 @@ import (
 	"github.com/sniperkit/snk.fork.go-git.v4/plumbing"
 	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/format/packfile"
 
-	. "gopkg.in/check.v1"
-	"gopkg.in/src-d/go-billy.v4/osfs"
+	"github.com/sniperkit/snk.fork.go-billy.v4/osfs"
+
 	"github.com/sniperkit/snk.fork.go-git-fixtures.v3"
+
+	. "gopkg.in/check.v1"
 )
 
 func (s *SuiteDotGit) TestNewObjectPack(c *C) {

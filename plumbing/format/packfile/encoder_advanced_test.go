@@ -17,8 +17,9 @@ import (
 	"github.com/sniperkit/snk.fork.go-git.v4/storage/filesystem"
 	"github.com/sniperkit/snk.fork.go-git.v4/storage/memory"
 
-	. "gopkg.in/check.v1"
 	"github.com/sniperkit/snk.fork.go-git-fixtures.v3"
+
+	. "gopkg.in/check.v1"
 )
 
 type EncoderAdvancedSuite struct {
@@ -33,7 +34,7 @@ func (s *EncoderAdvancedSuite) TestEncodeDecode(c *C) {
 	}
 
 	fixs := fixtures.Basic().ByTag("packfile").ByTag(".git")
-	fixs = append(fixs, fixtures.ByURL("https://github.com/sniperkit/snk.fork.go-git.git").
+	fixs = append(fixs, fixtures.ByURL("https://github.com/sniperkit/snk.fork.go-git.v4.git").
 		ByTag("packfile").ByTag(".git").One())
 	fixs.Test(c, func(f *fixtures.Fixture) {
 		storage, err := filesystem.NewStorage(f.DotGit())
@@ -49,7 +50,7 @@ func (s *EncoderAdvancedSuite) TestEncodeDecodeNoDeltaCompression(c *C) {
 	}
 
 	fixs := fixtures.Basic().ByTag("packfile").ByTag(".git")
-	fixs = append(fixs, fixtures.ByURL("https://github.com/sniperkit/snk.fork.go-git.git").
+	fixs = append(fixs, fixtures.ByURL("https://github.com/sniperkit/snk.fork.go-git.v4.git").
 		ByTag("packfile").ByTag(".git").One())
 	fixs.Test(c, func(f *fixtures.Fixture) {
 		storage, err := filesystem.NewStorage(f.DotGit())

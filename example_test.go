@@ -19,7 +19,7 @@ import (
 	"github.com/sniperkit/snk.fork.go-git.v4/plumbing"
 	"github.com/sniperkit/snk.fork.go-git.v4/storage/memory"
 
-	"gopkg.in/src-d/go-billy.v4/memfs"
+	"github.com/sniperkit/snk.fork.go-billy.v4/memfs"
 )
 
 func ExampleClone() {

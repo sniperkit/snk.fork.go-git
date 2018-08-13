@@ -7,8 +7,8 @@ Sniperkit-Bot
 package git
 
 import (
-	. "gopkg.in/check.v1"
 	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/object"
+	. "gopkg.in/check.v1"
 )
 
 type OptionsSuite struct {
