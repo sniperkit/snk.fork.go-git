@@ -13,6 +13,15 @@ import (
 	billy "github.com/sniperkit/snk.fork.go-billy.v4"
 )
 
+var (
+	// ErrInvalidObject is returned by Decode when an invalid object is
+	// found in the packfile.
+	ErrInvalidObject = NewError("invalid git object")
+	// ErrZLib is returned by Decode when there was an error unzipping
+	// the packfile contents.
+	ErrZLib = NewError("zlib reading error")
+)
+
 // Packfile allows retrieving information from inside a packfile.
 type Packfile struct {
 	idxfile.Index
