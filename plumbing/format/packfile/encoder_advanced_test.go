@@ -8,9 +8,11 @@ package packfile_test
 
 import (
 	"bytes"
+	"io"
 	"math/rand"
 	"testing"
 
+<<<<<<< HEAD
 	"github.com/sniperkit/snk.fork.go-git.v4/plumbing"
 	. "github.com/sniperkit/snk.fork.go-git.v4/plumbing/format/packfile"
 	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/storer"
@@ -18,6 +20,14 @@ import (
 	"github.com/sniperkit/snk.fork.go-git.v4/storage/memory"
 
 	"github.com/sniperkit/snk.fork.go-git-fixtures.v3"
+=======
+	"gopkg.in/src-d/go-billy.v4/memfs"
+	"gopkg.in/src-d/go-git.v4/plumbing"
+	"gopkg.in/src-d/go-git.v4/plumbing/format/idxfile"
+	. "gopkg.in/src-d/go-git.v4/plumbing/format/packfile"
+	"gopkg.in/src-d/go-git.v4/plumbing/storer"
+	"gopkg.in/src-d/go-git.v4/storage/filesystem"
+>>>>>>> a28c2ce44695f13ddf28748958f236afd8e0b544
 
 	. "gopkg.in/check.v1"
 )
@@ -41,7 +51,6 @@ func (s *EncoderAdvancedSuite) TestEncodeDecode(c *C) {
 		c.Assert(err, IsNil)
 		s.testEncodeDecode(c, storage, 10)
 	})
-
 }
 
 func (s *EncoderAdvancedSuite) TestEncodeDecodeNoDeltaCompression(c *C) {
@@ -59,8 +68,11 @@ func (s *EncoderAdvancedSuite) TestEncodeDecodeNoDeltaCompression(c *C) {
 	})
 }
 
-func (s *EncoderAdvancedSuite) testEncodeDecode(c *C, storage storer.Storer, packWindow uint) {
-
+func (s *EncoderAdvancedSuite) testEncodeDecode(
+	c *C,
+	storage storer.Storer,
+	packWindow uint,
+) {
 	objIter, err := storage.IterEncodedObjects(plumbing.AnyObject)
 	c.Assert(err, IsNil)
 
@@ -87,16 +99,35 @@ func (s *EncoderAdvancedSuite) testEncodeDecode(c *C, storage storer.Storer, pac
 	encodeHash, err := enc.Encode(hashes, packWindow)
 	c.Assert(err, IsNil)
 
-	scanner := NewScanner(buf)
-	storage = memory.NewStorage()
-	d, err := NewDecoder(scanner, storage)
-	c.Assert(err, IsNil)
-	decodeHash, err := d.Decode()
+	fs := memfs.New()
+	f, err := fs.Create("packfile")
 	c.Assert(err, IsNil)
 
+	_, err = f.Write(buf.Bytes())
+	c.Assert(err, IsNil)
+
+	_, err = f.Seek(0, io.SeekStart)
+	c.Assert(err, IsNil)
+
+	w := new(idxfile.Writer)
+	parser, err := NewParser(NewScanner(f), w)
+	c.Assert(err, IsNil)
+
+	_, err = parser.Parse()
+	c.Assert(err, IsNil)
+	index, err := w.Index()
+	c.Assert(err, IsNil)
+
+	_, err = f.Seek(0, io.SeekStart)
+	c.Assert(err, IsNil)
+
+	p := NewPackfile(index, fs, f)
+
+	decodeHash, err := p.ID()
+	c.Assert(err, IsNil)
 	c.Assert(encodeHash, Equals, decodeHash)
 
-	objIter, err = storage.IterEncodedObjects(plumbing.AnyObject)
+	objIter, err = p.GetAll()
 	c.Assert(err, IsNil)
 	obtainedObjects := map[plumbing.Hash]bool{}
 	err = objIter.ForEach(func(o plumbing.EncodedObject) error {
