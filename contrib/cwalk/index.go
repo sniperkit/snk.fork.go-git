@@ -1,1 +1,1 @@
-index.go
+package cwalk

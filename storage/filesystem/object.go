@@ -11,6 +11,9 @@ import (
 	"os"
 	"time"
 
+	"github.com/k0kubun/pp"
+	log "github.com/sirupsen/logrus"
+
 	"github.com/sniperkit/snk.fork.go-git.v4/plumbing"
 	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/cache"
 	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/format/idxfile"
@@ -445,6 +448,8 @@ func (it *lazyPackfilesIter) Next() (plumbing.EncodedObject, error) {
 }
 
 func (it *lazyPackfilesIter) ForEach(cb func(plumbing.EncodedObject) error) error {
+	log.Warnln("Foreach....")
+	pp.Println(cb)
 	return storer.ForEachIterator(it, cb)
 }
 

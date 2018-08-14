@@ -5,21 +5,16 @@ Sniperkit-Bot
 */
 
 // Package memory is a storage backend base on memory
-package memory
+package cmemory
 
 import (
 	"fmt"
 	"time"
-	// "sync"
-
-	// log "github.com/sirupsen/logrus"
 
 	"github.com/sniperkit/snk.fork.go-git.v4/config"
-
 	"github.com/sniperkit/snk.fork.go-git.v4/plumbing"
 	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/format/index"
 	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/storer"
-
 	"github.com/sniperkit/snk.fork.go-git.v4/storage"
 )
 
@@ -278,7 +273,6 @@ func (r ReferenceStorage) Reference(n plumbing.ReferenceName) (*plumbing.Referen
 func (r ReferenceStorage) IterReferences() (storer.ReferenceIter, error) {
 	var refs []*plumbing.Reference
 	for _, ref := range r {
-		// pp.Println("ref: ", ref)
 		refs = append(refs, ref)
 	}
 

@@ -4,13 +4,12 @@ Sniperkit-Bot
 - Status: analyzed
 */
 
-package memory
+package cmemory
 
 import (
 	"testing"
 
 	"github.com/sniperkit/snk.fork.go-git.v4/storage/test"
-
 	. "gopkg.in/check.v1"
 )
 

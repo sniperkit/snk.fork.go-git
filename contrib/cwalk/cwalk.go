@@ -1,1 +1,1 @@
-cwalk.go
+package cwalk

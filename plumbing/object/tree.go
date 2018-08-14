@@ -35,6 +35,8 @@ var (
 	ErrEntryNotFound     = errors.New("entry not found")
 )
 
+// Concurrent Map ?
+
 // Tree is basically like a directory - it references a bunch of other trees
 // and/or blobs (i.e. files and sub-directories)
 type Tree struct {
