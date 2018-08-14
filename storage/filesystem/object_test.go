@@ -7,18 +7,13 @@ Sniperkit-Bot
 package filesystem
 
 import (
-<<<<<<< HEAD
+	"io/ioutil"
+	"testing"
+
 	"github.com/sniperkit/snk.fork.go-git.v4/plumbing"
 	"github.com/sniperkit/snk.fork.go-git.v4/storage/filesystem/dotgit"
 
 	"github.com/sniperkit/snk.fork.go-git-fixtures.v3"
-=======
-	"io/ioutil"
-	"testing"
-
-	"gopkg.in/src-d/go-git.v4/plumbing"
-	"gopkg.in/src-d/go-git.v4/storage/filesystem/dotgit"
->>>>>>> a28c2ce44695f13ddf28748958f236afd8e0b544
 
 	. "gopkg.in/check.v1"
 )

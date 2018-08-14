@@ -7,8 +7,8 @@ import (
 	"sort"
 	"sync"
 
-	"gopkg.in/src-d/go-git.v4/plumbing"
-	"gopkg.in/src-d/go-git.v4/utils/binary"
+	"github.com/sniperkit/snk.fork.go-git.v4/plumbing"
+	"github.com/sniperkit/snk.fork.go-git.v4/utils/binary"
 )
 
 // objects implements sort.Interface and uses hash as sorting key.

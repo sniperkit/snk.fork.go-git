@@ -14,18 +14,13 @@ import (
 	"os"
 	"strconv"
 
-<<<<<<< HEAD
 	"github.com/sniperkit/snk.fork.go-git.v4/plumbing"
+	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/format/idxfile"
 	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/format/packfile"
 
 	"github.com/sniperkit/snk.fork.go-billy.v4/osfs"
 
 	"github.com/sniperkit/snk.fork.go-git-fixtures.v3"
-=======
-	"gopkg.in/src-d/go-git.v4/plumbing"
-	"gopkg.in/src-d/go-git.v4/plumbing/format/idxfile"
-	"gopkg.in/src-d/go-git.v4/plumbing/format/packfile"
->>>>>>> a28c2ce44695f13ddf28748958f236afd8e0b544
 
 	. "gopkg.in/check.v1"
 )

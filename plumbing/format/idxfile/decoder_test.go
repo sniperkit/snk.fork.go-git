@@ -15,6 +15,7 @@ import (
 	"testing"
 
 	"github.com/sniperkit/snk.fork.go-git-fixtures.v3"
+
 	"github.com/sniperkit/snk.fork.go-git.v4/plumbing"
 	. "github.com/sniperkit/snk.fork.go-git.v4/plumbing/format/idxfile"
 

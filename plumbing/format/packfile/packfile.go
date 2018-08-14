@@ -5,20 +5,12 @@ import (
 	"io"
 	"os"
 
-	billy "gopkg.in/src-d/go-billy.v4"
-	"gopkg.in/src-d/go-git.v4/plumbing"
-	"gopkg.in/src-d/go-git.v4/plumbing/cache"
-	"gopkg.in/src-d/go-git.v4/plumbing/format/idxfile"
-	"gopkg.in/src-d/go-git.v4/plumbing/storer"
-)
+	"github.com/sniperkit/snk.fork.go-git.v4/plumbing"
+	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/cache"
+	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/format/idxfile"
+	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/storer"
 
-var (
-	// ErrInvalidObject is returned by Decode when an invalid object is
-	// found in the packfile.
-	ErrInvalidObject = NewError("invalid git object")
-	// ErrZLib is returned by Decode when there was an error unzipping
-	// the packfile contents.
-	ErrZLib = NewError("zlib reading error")
+	billy "github.com/sniperkit/snk.fork.go-billy.v4"
 )
 
 // Packfile allows retrieving information from inside a packfile.

@@ -12,22 +12,15 @@ import (
 	"math/rand"
 	"testing"
 
-<<<<<<< HEAD
 	"github.com/sniperkit/snk.fork.go-git.v4/plumbing"
+	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/format/idxfile"
 	. "github.com/sniperkit/snk.fork.go-git.v4/plumbing/format/packfile"
 	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/storer"
 	"github.com/sniperkit/snk.fork.go-git.v4/storage/filesystem"
-	"github.com/sniperkit/snk.fork.go-git.v4/storage/memory"
+
+	"github.com/sniperkit/go-billy.v4/storage/memfs"
 
 	"github.com/sniperkit/snk.fork.go-git-fixtures.v3"
-=======
-	"gopkg.in/src-d/go-billy.v4/memfs"
-	"gopkg.in/src-d/go-git.v4/plumbing"
-	"gopkg.in/src-d/go-git.v4/plumbing/format/idxfile"
-	. "gopkg.in/src-d/go-git.v4/plumbing/format/packfile"
-	"gopkg.in/src-d/go-git.v4/plumbing/storer"
-	"gopkg.in/src-d/go-git.v4/storage/filesystem"
->>>>>>> a28c2ce44695f13ddf28748958f236afd8e0b544
 
 	. "gopkg.in/check.v1"
 )

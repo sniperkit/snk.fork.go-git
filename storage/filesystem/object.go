@@ -11,7 +11,6 @@ import (
 	"os"
 	"time"
 
-<<<<<<< HEAD
 	"github.com/k0kubun/pp"
 	log "github.com/sirupsen/logrus"
 
@@ -22,22 +21,9 @@ import (
 	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/format/packfile"
 	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/storer"
 	"github.com/sniperkit/snk.fork.go-git.v4/storage/filesystem/dotgit"
-	"github.com/sniperkit/snk.fork.go-git.v4/storage/memory"
 	"github.com/sniperkit/snk.fork.go-git.v4/utils/ioutil"
 
 	"github.com/sniperkit/snk.fork.go-billy.v4"
-=======
-	"gopkg.in/src-d/go-git.v4/plumbing"
-	"gopkg.in/src-d/go-git.v4/plumbing/cache"
-	"gopkg.in/src-d/go-git.v4/plumbing/format/idxfile"
-	"gopkg.in/src-d/go-git.v4/plumbing/format/objfile"
-	"gopkg.in/src-d/go-git.v4/plumbing/format/packfile"
-	"gopkg.in/src-d/go-git.v4/plumbing/storer"
-	"gopkg.in/src-d/go-git.v4/storage/filesystem/dotgit"
-	"gopkg.in/src-d/go-git.v4/utils/ioutil"
-
-	"gopkg.in/src-d/go-billy.v4"
->>>>>>> a28c2ce44695f13ddf28748958f236afd8e0b544
 )
 
 type ObjectStorage struct {

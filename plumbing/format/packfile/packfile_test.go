@@ -4,13 +4,16 @@ import (
 	"io"
 	"math"
 
+	fixtures "github.com/sniperkit/snk.fork.go-git-fixtures.v3"
+
+	"github.com/sniperkit/snk.fork.go-git.v4/plumbing"
+	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/format/idxfile"
+	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/format/packfile"
+	"github.com/sniperkit/snk.fork.go-git.v4/plumbing/storer"
+
+	"github.com/sniperkit/snk.fork.go-billy.v4/osfs"
+
 	. "gopkg.in/check.v1"
-	"gopkg.in/src-d/go-billy.v4/osfs"
-	fixtures "gopkg.in/src-d/go-git-fixtures.v3"
-	"gopkg.in/src-d/go-git.v4/plumbing"
-	"gopkg.in/src-d/go-git.v4/plumbing/format/idxfile"
-	"gopkg.in/src-d/go-git.v4/plumbing/format/packfile"
-	"gopkg.in/src-d/go-git.v4/plumbing/storer"
 )
 
 type PackfileSuite struct {
